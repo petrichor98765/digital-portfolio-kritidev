@@ -1,0 +1,156 @@
+@import url('https://rsms.me/inter/inter.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 3.6%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 3.6%;
+  --primary: 330 100% 71%;
+  --primary-foreground: 330 100% 10%;
+  --secondary: 330 50% 92%;
+  --secondary-foreground: 330 30% 20%;
+  --accent: 280 80% 70%;
+  --accent-foreground: 330 100% 10%;
+  --muted: 330 50% 92%;
+  --muted-foreground: 330 20% 50%;
+  --border: 330 50% 88%;
+  --destructive: 0 84.2% 60.2%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 330 40% 12%;
+  --foreground: 330 20% 95%;
+  --card: 330 40% 8%;
+  --card-foreground: 330 20% 95%;
+  --primary: 330 100% 75%;
+  --primary-foreground: 330 100% 8%;
+  --secondary: 330 40% 22%;
+  --secondary-foreground: 330 20% 95%;
+  --accent: 280 80% 72%;
+  --accent-foreground: 330 100% 8%;
+  --muted: 330 40% 22%;
+  --muted-foreground: 330 20% 70%;
+  --border: 330 40% 22%;
+  --destructive: 0 62.8% 30.6%;
+  --radius: 0.5rem;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Smooth scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}
+
+/* Code block styling */
+pre {
+  @apply bg-card border border-border rounded-lg p-4 overflow-x-auto;
+}
+
+code {
+  @apply font-mono text-sm;
+}
+
+/* Prose styling */
+a {
+  @apply text-primary hover:underline transition-colors;
+}
+
+/* Selection styling */
+::selection {
+  @apply bg-primary text-primary-foreground;
+}
+
+/* Links in prose */
+.prose a {
+  @apply text-primary hover:text-primary/80;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseSoft {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+.animate-pulse-soft {
+  animation: pulseSoft 3s ease-in-out infinite;
+}
+
+/* Utility classes */
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+}
+
+.backdrop-blur {
+  backdrop-filter: blur(8px);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

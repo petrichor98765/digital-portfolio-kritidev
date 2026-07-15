@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Sitemap: https://kriti.dev/sitemap.xml
+
+User-agent: *
+Allow: /public/
+
+Disallow: /admin/
+Disallow: /*.json$
