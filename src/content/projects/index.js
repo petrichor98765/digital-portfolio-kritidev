@@ -3,6 +3,7 @@ import agentcourtImg from './courtsim.jpg'
 import fakenewsImg from './fakenews.png'
 import bodylangImg from './bodylang.jpg'
 import produceImg from './produce.png'
+import DigitalPortfolioImg from './DigitalPortfolio.png'
 
 export const projects = [
   {
@@ -96,6 +97,24 @@ export const projects = [
     ],
     link: 'https://github.com/TarunSamala/FakeNews-Detection',
     github: 'https://github.com/TarunSamala/FakeNews-Detection',
+  },
+  {
+    id: 6,
+    slug: 'personal-digital-portfolio',
+    title: 'Personal Portfolio',
+    description:
+      'A digital portfolio highlighting my work experience, current goals and projects on github.',
+    image: DigitalPortfolioImg,
+    featured: false,
+    tags: [
+      'Vite',
+      'ReactJS',
+      'Framer',
+      'Javascript',
+      'NodeJS',
+    ],
+    link: 'https://kriti.dev',
+    github: 'https://github.com/petrichor98765/digital-portfolio-kritidev',
   },
 ];
 
